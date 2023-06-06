@@ -1,9 +1,13 @@
 from django.contrib import admin
-from django.contrib.auth.models import User
-from django.contrib.auth import forms
 from .models import Cliente, Vaga, Empresa
 
 # Register your models here.
+class EmpresaAdmin(admin.ModelAdmin):
+    model=Empresa
+
+class VagaAdmin(admin.ModelAdmin):
+    model=Vaga 
+
 
 admin.site.register(Cliente)
 admin.site.register(Empresa)
