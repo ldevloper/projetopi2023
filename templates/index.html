@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Vcar{% endblock title %}</title>
+    <title>{% block title %}Thefindjob{% endblock title %}</title>
     {% bootstrap_css %}
     <style>
         main > .container {
@@ -20,7 +20,7 @@
       <!-- Fixed navbar -->
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="{% static 'img/carro.png' %}" width="30"></a>
+          <a class="navbar-brand" href="#"><img src="{% static '' %}" width="30"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -30,13 +30,10 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'realizar_aluguel' %}">Aluguel</a>
+                <a class="nav-link" href="{% url 'realizar_cadastro' %}">Cadastrar Cliente</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'listar_carros' %}">Carros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'realizar_cadastro' %}">Clientes</a>
+                <a class="nav-link" href="{% url 'listar_vagas' %}">Vagas</a>
               </li>
             </ul>
             <div class="col-md-3 text-end">
@@ -44,7 +41,7 @@
               <span class="text-white">{{ user.username }}</span>
               <a href="{% url 'logout' %}" class="btn btn-primary">Sair</a>
               {% else %}
-              <a href="{% url 'register' %}" class="btn btn-primary">Registrar</a>
+              <a href="{% url 'registration' %}" class="btn btn-primary">Registrar</a>
               <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
 
               {% endif %}
@@ -68,7 +65,7 @@
     
     <footer class="footer mt-auto py-3 bg-light ">
       <div class="container">
-        <span class="text-muted">THEJOBFINDER - Grupo 3</span>
+        <span class="text-muted">THEJOBFINDER - Grupo 2</span>
       </div>
     </footer>
     

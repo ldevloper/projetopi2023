@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticated
 from .models import Vaga, Cliente, Empresa
 from .forms import EmpresaForm, ClienteForm, VagaForm
 from django.contrib.auth.decorators import login_required
@@ -121,7 +122,7 @@ class VagaViewSet(viewsets.ModelViewSet):
 
     @action(methods=['get'], detail=True)
     def likes(self, request, pk=None):
-        vaga = get_object_or_404(Noticia, pk=pk)
+        vaga = get_object_or_404(Vaga, pk=pk)
         vaga.likes += 1
         vaga.save()
 

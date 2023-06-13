@@ -6,7 +6,7 @@ class VagaModelSerializer(ModelSerializer):
     
     class Meta:
         model = Vaga
-        exclude = ["user"]
+        fields = "__all__"
 
 
 class ClienteModelSerializer(ModelSerializer):

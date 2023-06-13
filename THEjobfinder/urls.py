@@ -19,17 +19,17 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from vagas.views import index
-from vagas.views import  RegistrationView, VagaViewSet, ClienteViewSet
+from vagas.views import  RegistrationView, VagaViewSet, EmpresaViewSet
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken import views
 
 router = DefaultRouter()
 router.register('vagas', VagaViewSet)
-router.register('clientes', ClienteViewSet)
+router.register('empresa', EmpresaViewSet)
 
 urlpatterns = [
     path('', index, name="index"),
-    path('', include("router.urls")),
+    path('', include(router.urls)),
     path('api-token-auth/', views.obtain_auth_token),
     path('admin/', admin.site.urls),
     path('vagas/', include('vagas.urls')),

@@ -30,15 +30,11 @@ class Vaga(models.Model):
     descricao = models.TextField("Descrição")
     atividade = models.CharField("Atividade",max_length= 300)
     salario = models.CharField("Salário",max_length=50)
-    horarios = models.CharField("Horários",max_length=10)
+    horarios = models.CharField("Horários",max_length=50)
     total_vagas= models.CharField("Total de Vagas",max_length=50)
     curriulos= models.CharField("Curriculos",max_length=250)
-    cpf = models.ForeignKey(Cliente, on_delete=models.SET_NULL, related_name='cliente_vagas', null=True)
-    cnpj = models.ForeignKey("CNPJ",on_delete=models.CASCADE, related_name='empresa_vagas')
+    cnpj = models.ForeignKey(Empresa,on_delete=models.CASCADE, related_name='empresa_vagas')
 
 
-    def __str__(self):
-        return "{} - {} - {}".format(self.codigo, self.cliente.nome, self.carro.modelo)
 
-    def __str__(self):
-        return "{}".format(self.nome)
+
