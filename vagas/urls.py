@@ -18,7 +18,6 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import  listar_vagas, detalhar_vaga, realizar_cadastro_emp, realizar_cadastro, deletar_vaga, dar_like,criar_vaga
-from vagas.views import   EmpresaDetailView, VagaCreateView, RegistrationView
 
 urlpatterns = [
     path('vagas/', listar_vagas, name='listar_vagas'),
@@ -27,6 +26,6 @@ urlpatterns = [
     path('clientes/cadastrar',realizar_cadastro, name='realizar_cadastro'),
     path('empresa/cadastrar',realizar_cadastro_emp, name='cadastrar_empresa'),
     path('deletar_vaga/<int:id>/', deletar_vaga, name='deletar_vaga'),
-    path('criar_vaga/', VagaCreateView.as_view(), name='criar_vaga'),
+    path('criar_vaga/', criar_vaga, name='criar_vaga'),
     path('detalhar_vaga/<int:vaga_id>/like', dar_like, name='like_vaga'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
