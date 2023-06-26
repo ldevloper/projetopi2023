@@ -15,9 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from django.conf import settings
-from django.conf.urls.static import static
-from .views import  listar_vagas, detalhar_vaga, realizar_cadastro_emp, realizar_cadastro, deletar_vaga, dar_like,criar_vaga
+from .views import  listar_vagas, detalhar_vaga, realizar_cadastro_emp, realizar_cadastro, deletar_vaga,criar_vaga, detalhar_vaga
 
 urlpatterns = [
     path('vagas/', listar_vagas, name='listar_vagas'),
@@ -27,5 +25,5 @@ urlpatterns = [
     path('empresa/cadastrar',realizar_cadastro_emp, name='cadastrar_empresa'),
     path('deletar_vaga/<int:id>/', deletar_vaga, name='deletar_vaga'),
     path('criar_vaga/', criar_vaga, name='criar_vaga'),
-    path('detalhar_vaga/<int:vaga_id>/like', dar_like, name='like_vaga'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('detalhar_vaga/', detalhar_vaga, name='like_vaga'),
+]

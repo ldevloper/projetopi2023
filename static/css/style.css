@@ -1,0 +1,75 @@
+
+
+.header{
+    display: flex;
+    background-color: #f8f9fa;
+
+}
+
+.logo{
+    margin-left: 100px;
+}
+
+
+.form-inline{
+    padding-right: 160px;
+    
+}
+
+.navbar-nav{
+     padding-left: 50px;
+}
+
+.menu{
+    margin-left: 20px;
+    width: 100%;
+    
+    
+}
+
+.FSV{
+    height: 320px;
+    padding-top: 60px;
+    padding-left:100px;
+    background-color: #f8f9fa;
+    
+}
+
+
+.search-container button {
+    padding: 3px 10px 6px 10px;
+    background: #ddd;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+   
+
+}
+
+
+.search-container input{
+    padding: 5px;
+    margin-top: 8px;
+    font-size: 17px;
+    width: 500px;
+    
+      
+}
+
+.cardiv{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f8f9fa;
+}
+
+footer{
+    text-align: center;
+    padding-bottom: 70px;
+    background-color: #f8f9fa;
+}
+
+body{
+    background-color: #f8f9fa;
+}

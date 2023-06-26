@@ -1,0 +1,36 @@
+.body{
+    display: flex;
+    background-color:blue;
+
+}
+
+.cadstro{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 250px;
+}
+
+.img.card-img-top{
+    width: 370px;
+}
+
+.header{
+    display: flex;
+    background-color: #f8f9fa;
+    
+}
+    
+.logo{
+    margin-left: 100px;
+}
+
+.navbar-nav{
+    padding-left: 50px;
+}
+
+.menu{
+   margin-left: 20px;
+   width: 100%
+
+}
+         
